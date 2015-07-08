@@ -7,9 +7,37 @@ class parser():
     def __init__(self):
         self.tree = ET.parse('fr.xliff')
         self.root = self.tree.getroot()
+        self.convertToXLIFF()
         self.ns = {"target": ".//{urn:oasis:names:tc:xliff:document:1.2}target",
                    "trans-unit":".//{urn:oasis:names:tc:xliff:document:1.2}trans-unit",
                    "file":".//{urn:oasis:names:tc:xliff:document:1.2}file"}
+
+
+    def convertToXLIFF(self):
+        treeXML = ET.parse('fr.xml')
+        xmlFileRoot = ET.Element('xliff')
+        launchScreenFile = ET.Element('file')
+        storyBoardFile = ET.Element('file')
+        infoFile = ET.Element('file')
+        stringsFile = ET.Element('file')
+        stringsFile.set('original', "localizable/Localizable.strings")
+        stringsFile.set("source-language", "source-language")
+        stringsFile.set("datatype", "plaintext")
+        stringsFile.set('target-language', 'target')
+        for string in treeXML.findall("string"):
+            newString = ET.Element("string")
+            newString.text = string.text
+            stringsFile.append(newString)
+        testFile = ET.Element('file')
+        xmlFileRoot.append(launchScreenFile)
+        xmlFileRoot.append(storyBoardFile)
+        xmlFileRoot.append(infoFile)
+        xmlFileRoot.append(stringsFile)
+        xmlFileRoot.append(testFile)
+
+        self.prettify(xmlFileRoot)
+
+
 
     def returnLocalizableStrings(self):
         strings = []

@@ -1,0 +1,73 @@
+<ns0:xliff xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <ns0:file datatype="plaintext" original="localizable/Base.lproj/LaunchScreen.xib" source-language="en" target-language="fr">
+    <ns0:header>
+      <ns0:tool build-num="6D2105" tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.3.2" />
+    </ns0:header>
+    <ns0:body>
+      <ns0:trans-unit id="8ie-xW-0ye.text">
+        <ns0:source>  Copyright (c) 2015 Gary Nietlispach. All rights reserved.</ns0:source>
+        <ns0:target>finnish
+</ns0:target>
+        <ns0:note>Class = "UILabel"; text = "  Copyright (c) 2015 Gary Nietlispach. All rights reserved."; ObjectID = "8ie-xW-0ye";</ns0:note>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="kId-c2-rCX.text">
+        <ns0:source>localizable</ns0:source>
+        <ns0:target>finnish
+</ns0:target>
+        <ns0:note>Class = "UILabel"; text = "localizable"; ObjectID = "kId-c2-rCX";</ns0:note>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+  <ns0:file datatype="plaintext" original="localizable/Base.lproj/Main.storyboard" source-language="en" target-language="fr">
+    <ns0:header>
+      <ns0:tool build-num="6D2105" tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.3.2" />
+    </ns0:header>
+    <ns0:body>
+      <ns0:trans-unit id="bGF-3x-QJN.text">
+        <ns0:source>Label</ns0:source>
+        <ns0:target>finnish
+</ns0:target>
+        <ns0:note>Class = "UILabel"; text = "Label"; ObjectID = "bGF-3x-QJN";</ns0:note>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+  <ns0:file datatype="plaintext" original="localizable/Info.plist" source-language="en" target-language="fr">
+    <ns0:header>
+      <ns0:tool build-num="6D2105" tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.3.2" />
+    </ns0:header>
+    <ns0:body>
+      <ns0:trans-unit id="CFBundleName">
+        <ns0:source>$(PRODUCT_NAME)</ns0:source>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="CFBundleShortVersionString">
+        <ns0:source>1.0</ns0:source>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+  <ns0:file datatype="plaintext" original="localizable/Localizable.strings" source-language="en" target-language="fr">
+    <ns0:header>
+      <ns0:tool build-num="6D2105" tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.3.2" />
+    </ns0:header>
+    <ns0:body>
+      <ns0:trans-unit id="hello">
+        <ns0:source>hello</ns0:source>
+        <ns0:target>finnish
+</ns0:target>
+        <ns0:note>No comment provided by engineer.</ns0:note>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+  <ns0:file datatype="plaintext" original="localizableTests/Info.plist" source-language="en" target-language="fr">
+    <ns0:header>
+      <ns0:tool build-num="6D2105" tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="6.3.2" />
+    </ns0:header>
+    <ns0:body>
+      <ns0:trans-unit id="CFBundleName">
+        <ns0:source>$(PRODUCT_NAME)</ns0:source>
+      </ns0:trans-unit>
+      <ns0:trans-unit id="CFBundleShortVersionString">
+        <ns0:source>1.0</ns0:source>
+      </ns0:trans-unit>
+    </ns0:body>
+  </ns0:file>
+</ns0:xliff>

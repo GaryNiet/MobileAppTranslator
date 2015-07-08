@@ -1,0 +1,87 @@
+<ns0:xliff xmlns:ns0="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+<ns0:file datatype="plaintext" original="MyApp/Base.lproj/Main.storyboard" source-language="en" target-language="kg" xml:space="preserve">
+<ns0:header>
+<ns0:tool tool-id="poeditor.com" tool-name="POEditor" />
+</ns0:header>
+<ns0:body>
+<ns0:trans-unit id="app.name">
+<ns0:source>TODO List</ns0:source>
+<ns0:target>fqw3r4tq
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.text">
+<ns0:source>Enter your credentials below to login</ns0:source>
+<ns0:target>erwg
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.message.success">
+<ns0:source>Login successful !\nWelcome back %s !</ns0:source>
+<ns0:target>gfewra
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.message.error">
+<ns0:source>
+Make sure you've entered the correct username and password
+</ns0:source>
+<ns0:target>gfer
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.password.forget">
+<ns0:source>I forgot my password</ns0:source>
+<ns0:target>gfer
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.password.reset">
+<ns0:source>
+Enter your address in the field below. A new password will be sent to your inbox.
+</ns0:source>
+<ns0:target>egfaw
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.register.text">
+<ns0:source>Sign up for free! No credit card required!</ns0:source>
+<ns0:target>asefgae
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.register.message.success">
+<ns0:source>
+Thank you for signing up !\nPlease check your email address to activate your account.
+</ns0:source>
+<ns0:target>egaerg
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.register.message.error">
+<ns0:source>
+We were unable to sign you up.\nPlease correct the marked fields.
+</ns0:source>
+<ns0:target>
+Nous n'avons pas pu vous inscrire.\nVeuillez corriger les champs marqu&#233;s.
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.menu.terms">
+<ns0:source>Terms and conditions</ns0:source>
+<ns0:target>Termes et conditions</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.users.active">
+<ns0:source>Just one user online</ns0:source>
+<ns0:target>Un seul utilisateur en ligne</ns0:target>
+</ns0:trans-unit>
+</ns0:body>
+</ns0:file>
+<ns0:file datatype="plaintext" original="form_label" source-language="en" target-language="kg" xml:space="preserve">
+<ns0:header>
+<ns0:tool tool-id="poeditor.com" tool-name="POEditor" />
+</ns0:header>
+<ns0:body>
+<ns0:trans-unit id="app.login.text">
+<ns0:source>Username</ns0:source>
+<ns0:target>erwg
+</ns0:target>
+</ns0:trans-unit>
+<ns0:trans-unit id="app.login.pass">
+<ns0:source>Password</ns0:source>
+<ns0:target>Mot de passe</ns0:target>
+</ns0:trans-unit>
+</ns0:body>
+</ns0:file>
+</ns0:xliff>

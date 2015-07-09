@@ -90,8 +90,7 @@ class scriptGUI(Qt.QApplication):
     def nextTranslation(self):
         self.table.setTranslation(self.translateText.toPlainText())
         arrayRow = self.table.currentRow()
-        id = self.strings[arrayRow][3]
-        self.parser.translate(self.translateText.toPlainText(), id)
+        self.parser.translate(self.translateText.toPlainText(), arrayRow)
         self.table.selectNextRow()
         self.translateText.clear()
 

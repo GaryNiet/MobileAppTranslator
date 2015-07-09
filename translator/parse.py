@@ -1,78 +1,44 @@
 __author__ = 'gnt'
 
 import xml.etree.ElementTree as ET
-import xml.dom.minidom as minidom
+import re
+
 
 class parser():
     def __init__(self):
-        self.tree = ET.parse('fr.xliff')
-        self.root = self.tree.getroot()
-        self.convertToXLIFF()
-        self.ns = {"target": ".//{urn:oasis:names:tc:xliff:document:1.2}target",
-                   "trans-unit":".//{urn:oasis:names:tc:xliff:document:1.2}trans-unit",
-                   "file":".//{urn:oasis:names:tc:xliff:document:1.2}file"}
-
-
-    def convertToXLIFF(self):
-        treeXML = ET.parse('fr.xml')
-        xmlFileRoot = ET.Element('xliff')
-        launchScreenFile = ET.Element('file')
-        storyBoardFile = ET.Element('file')
-        infoFile = ET.Element('file')
-        stringsFile = ET.Element('file')
-        stringsFile.set('original', "localizable/Localizable.strings")
-        stringsFile.set("source-language", "source-language")
-        stringsFile.set("datatype", "plaintext")
-        stringsFile.set('target-language', 'target')
-        for string in treeXML.findall("string"):
-            newString = ET.Element("string")
-            newString.text = string.text
-            stringsFile.append(newString)
-        testFile = ET.Element('file')
-        xmlFileRoot.append(launchScreenFile)
-        xmlFileRoot.append(storyBoardFile)
-        xmlFileRoot.append(infoFile)
-        xmlFileRoot.append(stringsFile)
-        xmlFileRoot.append(testFile)
-
-        self.prettify(xmlFileRoot)
-
+        self.values = []
+        file = open("file.strings", 'r')
+        strings = []
+        for line in file:
+            value = line.split("\"")
+            self.values.append([value[1],value[3]])
+        file.close()
 
 
     def returnLocalizableStrings(self):
         strings = []
-        for transUnit in self.root.findall(self.ns['trans-unit']):
-            if(len(transUnit)>1):
-                string = []
-                string.append(transUnit[0].text)
-                try:
-                    string.append(transUnit[1].text)
-                except:
-                    string.append("")
-                try:
-                    string.append(transUnit[2].text)
-                except:
-                    string.append("no comment")
-                string.append(transUnit.attrib['id'])
-                strings.append(string)
+        for value in self.values:
+            print("prout")
+            string = []
+            string.append(value[0])
+            string.append(value[1])
+            string.append("comment")
+
+            strings.append(string)
         return strings
 
     #return the source-language ISO639 code of the first <file> of the xliff
     def getSourceLanguage(self):
-        return self.root.find(self.ns['file']).attrib['source-language']
+        return "en"
 
     def getTargetLanguage(self):
-        return self.root.find(self.ns['file']).attrib['target-language']
+        return "fr"
 
     def translate(self, translation, transID):
-        transUnits = self.root.findall(self.ns['trans-unit'])
-        for unit in transUnits:
-            if unit.attrib['id'] == transID:
-                print("found")
-                unit[1].text = translation
+        self.values[transID][1] = translation
 
     def saveIOS(self, name):
-        self.tree.write(name +".xliff")
+        print(self.values)
 
     def saveAndroid(self,name):
 
@@ -98,13 +64,7 @@ class parser():
         for files in array:
             files.attrib['target-language'] = newLanguageCode
 
-    def prettify(self, elem):
-        """Return a pretty-printed XML string for the Element.
-        """
-        rough_string = ET.tostring(elem, 'utf-8')
-        reparsed = minidom.parseString(rough_string)
-        print(reparsed.toprettyxml(indent="\t"))
-        return reparsed.toprettyxml(indent="\t")
+
 
 
 
